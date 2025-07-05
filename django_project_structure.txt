@@ -1,0 +1,39 @@
+your_project/
+├── your_project/               # Project config (settings, urls, wsgi, etc.)
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── apps/                       # Group all Django apps here
+│   ├── accounts/
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   ├── templates/accounts/    # App-specific templates
+│   │   └── static/accounts/       # App-specific static files
+│   │       ├── css/
+│   │       └── js/
+│   ├── blog/
+│   │   └── ...
+│   └── ...
+│
+├── static/                     # ✅ Global static assets (used in all apps)
+│   ├── css/
+│   │   └── base.css
+│   ├── js/
+│   │   └── main.js
+│   ├── images/
+│   │   └── logo.png
+│   └── favicon.ico
+│
+├── templates/                  # ✅ Global templates (like base.html)
+│   ├── base.html
+│   └── ...
+│
+├── media/                      # User-uploaded files (during dev)
+│   └── profile_pics/
+│
+├── manage.py
+├── requirements.txt
+└── README.md
