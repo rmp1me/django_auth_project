@@ -5,25 +5,40 @@
     <meta charset="UTF-8">
     <title>{% block title %}My Django App{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Base CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     {% block extra_head %}{% endblock %}
 </head>
 <body>
-    <header>
-        <h1>My Django App</h1>
+
+    {% block top_banner %}{% endblock %}
+
+    <header class="py-3 text-center bg-primary text-white shadow">
+        <h1 class="h3 m-0">My Django App</h1>
     </header>
 
-    <main>
+    <main class="py-4">
         {% block content %}
         <!-- Page-specific content goes here -->
         {% endblock %}
     </main>
 
-    <footer>
-        <p>&copy; 2025 My Company</p>
+    <footer class="text-center py-3 bg-primary text-white small">
+        <p class="m-0">&copy; 2025 My Company</p>
     </footer>
 
+    <!-- Main JS -->
     <script src="{% static 'js/main.js' %}"></script>
-    {% block extra_js %}{% endblock %}
+
+    <!-- Bootstrap JS Bundle -->
+   
+
+    {% block extra_js %} {% endblock %}
+
 </body>
 </html>

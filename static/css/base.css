@@ -4,7 +4,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+.top-banner {
+    display: flex;
+    justify-content: flex-end;  /* pushes content to the right */
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+}
 
+.top-banner a {
+    text-decoration: none;
+    color: #007bff;
+  
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f7f9fc;
@@ -60,5 +71,12 @@ button:hover, .btn:hover {
 
 /* Forms */
 input[type="text"],
-input[type="email"],
-input[ty]()
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
