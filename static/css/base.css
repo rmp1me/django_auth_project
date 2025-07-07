@@ -14,6 +14,7 @@
 .top-banner a {
     text-decoration: none;
     color: #007bff;
+    margin-left: 15px; 
   
 }
 body {
@@ -73,7 +74,7 @@ button:hover, .btn:hover {
 input[type="text"],
 input[type="email"] {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     margin-top: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;

@@ -2,15 +2,14 @@
 {% block title %}Home{% endblock %}
 
 {% block top_banner %}
-    <div class="top-banner">
-        <a href="/admin/">Admin Login</a>
-        {% comment %} <a href="{% url 'login' %}">| Login</a> {% endcomment %}
-         <a href="{% url 'register' %}">| New Registration</a>
-    </div>
+<div class="top-banner">
+    <a href="{% url 'admin:index' %}">Admin Login</a>
+    <a href="{% url 'register' %}">| New Registration</a>
+    <a href="{% url 'login' %}">| Login</a>
+</div>
 {% endblock %}
 
 {% block content %}
 <h2>Welcome to the Home Page</h2>
 <p>This is the first page of my Django project.</p>
-
 {% endblock %}
