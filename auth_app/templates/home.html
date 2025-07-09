@@ -1,4 +1,29 @@
 {% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block top_banner %}
+<div class="top-banner">
+
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.first_name|default:user.username }}!</p>
+        <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+        <a href="/admin/">Admin</a>
+        <a href="{% url 'register' %}">Register</a>
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+
+</div>
+{% endblock %}
+
+{% block content %}
+<h2>Welcome to the Home Page</h2>
+<p>This is the first page of my Django project.</p>
+{% endblock %}
+
+
+{% comment %} {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
 
 {% block top_banner %}
@@ -12,4 +37,5 @@
 {% block content %}
 <h2>Welcome to the Home Page</h2>
 <p>This is the first page of my Django project.</p>
-{% endblock %}
+{% endblock %} {% endcomment %}
+
