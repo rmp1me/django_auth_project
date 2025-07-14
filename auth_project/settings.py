@@ -118,9 +118,7 @@ USE_TZ = True
 
 # STATIC_URL = 'static/'
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # 👈 this points to global static folder
-]
+STATICFILES_DIRS = [ BASE_DIR / 'static', ]
 
 LOGOUT_REDIRECT_URL = 'home'
 
